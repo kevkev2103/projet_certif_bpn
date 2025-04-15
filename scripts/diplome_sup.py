@@ -5,6 +5,7 @@ file_path = "../data_brute/part des 25 34 ans titulaire diplome sup.xlsx"
 output_folder = "../data_clean/"
 output_file = os.path.join(output_folder, "diplome_sup_clean.csv")
 xls = pd.ExcelFile(file_path)
+
 df = pd.read_excel(xls, sheet_name="Data")
 
 df_clean = df.iloc[4:].reset_index(drop=True)
